@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.drawer-container {
+    display: flex;
+}
+
+.drawer {
+    width: 280px;
+    height: 100vh;
+    background-color: #333;
+    border-radius: 15px;
+    margin: 10px;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.app-bar {
+    color: rgb(5, 4, 4);
+    padding: 15px;
+    margin-top: 15px;
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+}
+.app-bar p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.filter-btn-container {
+    position: relative;
+    width: 100%;
+}
+
+.filter-btn {
+    background-color: rgb(66, 186, 202);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    position: relative; /* Added this line */
+}
+
+.filter-btn i {
+    margin-right: 5px;
+    transition: transform 0.3s;
+}
+
+.filter-content {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px); /* Updated this line */
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.filter-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: black;
+}
+
+.filter-content li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-content li:hover {
+    background-color: #f0f0f0;
+}
+
+.filter-btn.active + .filter-content {
+    display: block;
+}
+
+.filter-btn.active i {
+    transform: rotate(180deg);
+}
+
+.item-button-list {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.item-button {
+    color: rgb(236, 232, 232);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.item-button i {
+    margin-right: 10px;
+}
